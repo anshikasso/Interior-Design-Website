@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Playfair Display', serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Sidebar styling with curved edge */
+.sidebar {
+  width: 30%;
+  background-color: #e7d8cb;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.sidebar h1 {
+  font-size: 28px;
+  color: #3a3a3a;
+  margin-bottom: 60px;
+  line-height: 1.4;
+}
+
+.sidebar .amp {
+  font-size: 60px;
+  line-height: 0.5;
+  display: block;
+  font-style: italic;
+  color: #4a443c;
+}
+
+/* Navigation buttons */
+.nav-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-buttons button {
+  padding: 12px 20px;
+  border: 1px solid #bfae9e;
+  background-color: transparent;
+  border-radius: 25px;
+  font-size: 16px;
+  font-family: 'Playfair Display', serif;
+  color: #3a3a3a;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-buttons button:hover:not(:disabled) {
+  background-color: #d5c1af;
+}
+
+.nav-buttons button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* Right side image panel */
+.main-image {
+  width: 100%;
+  background-image: url('pexels-itsterrymag-2635038.jpg'); /* Replace with your actual image name */
+  background-size: cover;
+  background-position: center;
+}
+
