@@ -1,30 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ans & Co. Interiors</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ans&Co.</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="hero-section">
-    <nav class="navbar">
-      <div class="logo">Ans<span class="amp">&</span>Co.</div>
-      <div class="nav-links">
-        <button>Home</button>
-        <button>Services</button>
-        <button>Portfolio</button>
-        <button>Testimonials</button>
-      </div>
-    </nav>
+    <section class="homepg" id="HOME">
+        <div class="navbar">
+            <div class="logo">
+                <img src="Images/Gemini_Generated_Image_t0rof2t0rof2t0ro-removebg-preview.png" alt="Ans&Co Logo">
+            </div>
+            <nav class="navbar-items h-class">
+                <ul class="nav v-class">
+                    <li><a href="#HOME">HOME</a></li>
+                    <li><a href="#SERVICES">SERVICES</a></li>
+                    <li><a href="#PORTFOLIO">PORTFOLIO</a></li>
+                    <li><a href="#TESTIMONIALS">TESTIMONIALS</a></li>
+                </ul>
+            </nav>
+            <div class="burger">&#9776;</div>
+        </div>
+        <div class="content">
+            <h1 class="heading">Our Philosophy</h1>
+            <p class="para">At Ans & Co. Interiors, we believe that design is more than just aesthetics — it's about creating meaningful spaces<br> that reflect personality, purpose, and emotion. Every room tells a story, and we craft each one with intention, blending <br>functionality with beauty. We value simplicity, timelessness, and a deep respect for the client's vision.Our philosophy centers<br> on thoughtful collaboration, sustainable choices, and transforming everyday spaces into soulful experiences.</p>
+        </div>
+    </section>
 
-    <div class="philosophy-box">
-      <h1>Our Philosophy</h1>
-      <p>
-        At Ans & Co. Interiors, we believe that design is more than just aesthetics — it's about creating meaningful spaces that reflect personality, purpose, and emotion. Every room tells a story, and we craft each one with intention, blending functionality with beauty. We value simplicity, timelessness, and a deep respect for the client’s vision. Our philosophy centers on thoughtful collaboration, sustainable choices, and transforming everyday spaces into soulful experiences.
-      </p>
-    </div>
-  </div>
+    <!-- Services Section -->
+    <section class="sec" id="SERVICES">
+        <h1 class="heading">Redefining your space with <br><span>timeless elegance</span> one</h1>
+        <div class="service_box">
+            <div class="boxes">
+                <img src="Images/pexels-itsterrymag-2635038 (1).jpg" alt="Residential">
+                <h1>Residential Interior Design</h1>
+                <p>Creating personalized living spaces that reflect your lifestyle and personality. From cozy bedrooms to functional kitchens, we transform your house into a home that tells your unique story.</p>
+            </div>
+            <div class="boxes">
+                <img src="Images/business-meeting-room-high-rise-office-building-with-colorful-decor-furnture.jpg" alt="Commercial">
+                <h1>Commercial Interior Design</h1>
+                <p>Designing functional and aesthetic spaces for offices, cafés, retail stores, and co-working areas that enhance productivity and create memorable experiences for your customers.</p>
+            </div>
+            <div class="boxes">
+                <img src="Images/pexels-pixabay-260931.jpg" alt="Institutional">
+                <h1>Institutional Interior Design</h1>
+                <p>Creating inspiring environments for educational institutions, healthcare facilities, and public spaces that prioritize both functionality and human well-being.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section" id="PORTFOLIO">
+        <div class="portfolio">
+            <h2 class="heading">Spaces <span>We've Styled</span></h2>
+        </div>
+        <div class="masonry">
+            <div class="item"><img src="Images/pexels-jworks1124-342800.jpg" alt="Interior Design 1"></div>
+            <div class="item"><img src="Images/pexels-alex-qian-1180283-2343468.jpg" alt="Interior Design 2"></div>
+            <div class="item"><img src="Images/pexels-marta-dzedyshko-1042863-2067638.jpg" alt="Interior Design 3"></div>
+            <div class="item"><img src="Images/pexels-itsterrymag-2635038 (1).jpg" alt="Interior Design 4"></div>
+            <div class="item"><img src="Images/pexels-jvdm-1454805.jpg" alt="Interior Design 5"></div>
+            <div class="item"><img src="Images/pexels-amelia-hallsworth-5461648.jpg" alt="Interior Design 6"></div>
+            <div class="item"><img src="Images/pexels-rachel-claire-6127075.jpg" alt="Interior Design 7"></div>
+            <div class="item"><img src="Images/pexels-pixabay-260931.jpg" alt="Interior Design 8"></div>
+            <div class="item"><img src="Images/pexels-yuraforrat-10161225.jpg" alt="Interior Design 9"></div>
+            <div class="item"><img src="Images/pexels-frans-van-heerden-201846-633269.jpg" alt="Interior Design 10"></div>
+            <div class="item"><img src="Images/pexels-the-ghazi-2152398165-33167283.jpg" alt="Interior Design 11"></div>
+            <div class="item"><img src="Images/pexels-kamo11235-667838.jpg" alt="Interior Design 12"></div>
+            <div class="item"><img src="Images/pexels-valeriya-827518.jpg" alt="Interior Design 13"></div>
+            <div class="item"><img src="Images/pexels-falling4utah-1080696.jpg" alt="Interior Design 14"></div>
+            <div class="item"><img src="Images/modern-minimalist-office.jpg" alt="Interior Design 15"></div>
+            <div class="item"><img src="Images/empty-conference-room-with-copy-space.jpg" alt="Interior Design 16"></div> 
+            
+        </div>
+    </section>
+
+ <!-- Testimonials Section -->
+    <section class="testimonials-section" id="TESTIMONIALS">
+        <!-- Hidden checkboxes for slide control -->
+        <input type="radio" name="testimonial" id="test1" checked>
+        <input type="radio" name="testimonial" id="test2">
+        <input type="radio" name="testimonial" id="test3">
+
+        <h1 class="heading">Designs That Speak – So Do <span>Our Clients</span></h1>
+
+        <div class="testimonials-container">
+            <div class="testimonials">
+                <!-- Testimonial 1 -->
+                <div class="testimonial">
+                    <p>"Ans & Co. transformed our living space beautifully. Their attention to detail and understanding of our vision was exceptional. The team was professional throughout."</p>
+                    <h3>- Priya Sharma</h3>
+                    <span>Residential Interior Design</span>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial">
+                    <p>"Our office space looks amazing now! The commercial design perfectly balances functionality with aesthetics. Highly recommend their services."</p>
+                    <h3>- Rajesh Kumar</h3>
+                    <span>Commercial Interior Design</span>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial">
+                    <p>"Outstanding work on our healthcare facility. They created a calming environment that both patients and staff love. Truly professional team."</p>
+                    <h3>- Dr. Anita Menon</h3>
+                    <span>Institutional Interior Design</span>
+                </div>
+            </div>
+
+            <!-- Navigation dots -->
+            <div class="nav-dots">
+                <label for="test1"></label>
+                <label for="test2"></label>
+                <label for="test3"></label>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>All Rights Reserved © 2025</p>
+    </footer>
 </body>
 </html>
