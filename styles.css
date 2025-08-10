@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    text-transform: capitalize;
-    transition: all 0.5s linear;
+    transition: all 0.3s ease;
 }
 
 html {
@@ -13,253 +12,328 @@ html {
 }
 
 body {
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #4a4a4a;
 }
 
-/* Home Page Styles */
-.homepg {
-    height: 100vh;
-    width: 100%;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                url("Images/cozy-living-room-with-plants-sofa-natural-light.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-/* Navigation Styles */
-.logo img {
-    height: 50px; 
-    width: auto;    
-    display: block; 
-}
-
+/* Navigation*/
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1% 2%;
+    padding: 15px 40px;
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: transparent;
-    transition: background-color 0.5s;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
     z-index: 1000;
 }
 
-.navbar:hover {
-    background-color: rgba(24, 24, 24, 0.9);
-}
-
-.navbar-items {
-    flex: 1;
-    text-align: right;
-    margin-top: 12px;
+.logo img {
+    height: 45px;
+    width: auto;
 }
 
 .navbar-items ul {
-    padding-right: 20px;
-}
-
-.navbar-items ul li {
+    display: flex;
     list-style: none;
-    display: inline-block;
+    gap: 30px;
 }
 
 .navbar-items ul li a {
-    color: #E2D4C7;
-    padding: 0 16px;
+    color: #64503D;
     text-decoration: none;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 17px;
-    font-weight: 600;
-    letter-spacing: 2px;
+    font-family: 'Josefin Sans', serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
-.navbar-items ul li a:hover {
+.navbar-items ul li a:hover,
+.navbar-items ul li a.active {
     color: #E5AA70;
 }
 
-.burger {
-    display: none;
-    color: #E2D4C7;
-    font-size: 24px;
-    cursor: pointer;
+.navbar-items ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #E5AA70;
+    transition: width 0.3s ease;
 }
 
-/* Content Styles */
-.content {
-    width: 80%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    color: #E2D4C7;
-    text-align: center;
+.navbar-items ul li a:hover::after,
+.navbar-items ul li a.active::after {
+    width: 100%;
+}
+
+/*Common Section*/
+.section {
+    min-height: 100vh;
+    padding: 120px 40px 80px;
 }
 
 .heading {
-    font-size: 40px;
-    font-family: 'Josefin Sans', sans-serif;
-    color: #E2D4C7;
-    margin-bottom: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 600;
+    color: #64503D;
+    text-align: center;
+    margin-bottom: 60px;
+    line-height: 1.2;
 }
 
 .heading span {
-    color: #E5AA70;
+    color: #64503D;
+}
+
+/*Home Page*/
+.homepg {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(127, 176, 105, 0.2)),
+                url("Images/cozy-living-room-with-plants-sofa-natural-light.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.content {
+    max-width: 800px;
+    color: #f5f0eb;
+    padding: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(30px);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.content .heading {
+    color: #f5f0eb;
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 900px;
+    margin-bottom: 30px;
 }
 
 .para {
-    font-size: 20px;
-    padding: 16px 0;
-    line-height: 1.6;
-    font-style: bold;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-weight: 400;
+    opacity: 100;
 }
 
-/* Services Section */
-.sec {
-    padding: 80px 20px;
-    background-color: #f5f0eb;
+/*Services Section*/
+.services-page {
+    background: linear-gradient(135deg, #f5f0eb 0%, #e8ddd4 100%);
 }
-
-.sec .heading {
-    color: #64503D;
-    text-align: center;
-    margin-bottom: 50px;
+.services-page span {
+    color: #E5AA70;
 }
-
 .service_box {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
     max-width: 100%;
     margin: 0 auto;
 }
 
 .boxes {
-    flex: 1;
-    text-align: left;
-    background: #E2D4C7;
-    border-radius: 10px;
+    background: #f5f0eb;
+    border-radius: 15px;
     overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #64503D;
+}
+
+.boxes:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
 .boxes img {
     width: 100%;
-    height: 250px;
+    height: 280px;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.boxes:hover img {
+    transform: scale(1.05);
 }
 
 .boxes h1 {
-    padding: 20px;
-    color: #5F5A47;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 24px;
+    padding: 25px 25px 15px;
+    color: #64503D;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 800;
 }
 
 .boxes p {
-    font-size: 14px;
-    text-align: left;
-    padding: 0 20px 20px 20px;
-    line-height: 1.6;
-    color: #5F5A47;
-    font-weight: 600;
+    font-family: 'serif', serif;
+    font-size: 18px;
+    padding: 0 25px;
+    line-height: 1.7;
+    color: #474545;
+    margin-bottom: 20px;
+    font-weight: 400;
 }
 
 .boxes a {
     color: #E5AA70;
     text-decoration: none;
-    margin: 0 20px 20px 20px;
+    margin: 0 25px 25px;
     display: inline-block;
-    font-weight: 600;
+    font-weight: 500;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
     transition: all 0.3s ease;
 }
 
-/* Portfolio Section */
-.portfolio-section {
-    padding: 80px 20px;
-    background-color: #f5f0eb;
-}
-
-.portfolio {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.portfolio h2 {
-    font-size: clamp(2em, 5vw, 4em);
+.boxes a:hover {
     color: #64503D;
-    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 1px;
+}
+
+/*Portfolio Section*/
+.portfolio-page {
+    background: linear-gradient(135deg, #f5f0eb 0%, #e8ddd4 100%);
+}
+.portfolio-page span {
+    color: #E5AA70;
+}
+
+/*Filter*/
+.filter-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.filter-tabs {
+    display: inline-flex;
+    background: rgba(100, 80, 61, 0.1);
+    border-radius: 50px;
+    padding: 8px;
+    gap: 5px;
+}
+
+.filter-tabs input[type="radio"] {
+    display: none;
+}
+
+.filter-tabs label {
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 40px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    color: #64503D;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.filter-tabs label:hover {
+    background: rgba(229, 170, 112, 0.2);
+    color: #E5AA70;
+}
+
+.filter-tabs input[type="radio"]:checked + label {
+    background: #E5AA70;
+    color: white;
+    box-shadow: 0 4px 15px rgba(229, 170, 112, 0.3);
 }
 
 .masonry {
     column-count: 4;
-    column-gap: 20px;
+    column-gap: 25px;
     margin: 0 auto;
-    max-width: 100%;
+    max-width: 90%;
 }
 
 .masonry .item {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     break-inside: avoid;
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    transition: all 0.5s ease;
+    border: 1px solid #4a3a2a;
+    display: block;
+    opacity: 1;
+}
+
+.masonry .item:hover {
+    transform: scale(1.03);
 }
 
 .masonry .item img {
     width: 100%;
     height: auto;
     display: block;
-    max-width: 100%;
-    vertical-align: middle;
-    filter: grayscale(100%);
+    filter: grayscale(90%);
     transition: filter 0.3s ease;
 }
 
 .masonry .item:hover img {
     filter: grayscale(0%);
 }
-/* Testimonials Section Styles */
-.testimonials-section {
-    padding: 80px 20px;
-    background-color: #f5f0eb ;
-    text-align: center;
+
+/* Filter Checkbox*/
+#filter-residential:checked ~ .masonry .item:not(.residential),
+#filter-commercial:checked ~ .masonry .item:not(.commercial),
+#filter-renovation:checked ~ .masonry .item:not(.renovation) {
+    display: none;
+    opacity: 0;
 }
 
-/* Hide radio buttons */
+#filter-all:checked ~ .masonry .item {
+    display: block;
+    opacity: 1;
+}
+
+/*Testimonials Section*/
+.testimonials-page {
+    background: linear-gradient(135deg, #f5f0eb 0%, #e8ddd4 100%);
+}
+.testimonials-page span {
+    color: #E5AA70;
+}
 input[type="radio"] {
     display: none;
 }
 
-/* Main heading - matching your site's style */
-.testimonials-section .heading {
-    font-size: 40px;
-    font-family: 'Josefin Sans', sans-serif;
-    color: #64503D;
-    margin-bottom: 50px;
-    text-align: center;
-}
-
-/* Testimonials container for centering */
 .testimonials-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+    align-items: center;
 }
 
-/* Testimonials wrapper */
 .testimonials {
     position: relative;
-    height: 250px;
-    margin-bottom: 40px;
+    height: 280px;
+    margin-bottom: 50px;
 }
 
-/* Individual testimonial */
 .testimonial {
     position: absolute;
     top: 0;
@@ -267,61 +341,88 @@ input[type="radio"] {
     width: 100%;
     opacity: 0;
     transition: opacity 0.6s ease;
-    padding: 30px;
+    padding: 40px;
+    text-align: center;
 }
+/*Testimonials Animation*/
+.testimonial:nth-child(1) { animation: show1 6s infinite; }
+.testimonial:nth-child(2) { animation: show2 6s infinite; }
+.testimonial:nth-child(3) { animation: show3 6s infinite; }
+.nav-dots label:nth-child(1) { animation: dot1 6s infinite; }
+.nav-dots label:nth-child(2) { animation: dot2 6s infinite; }
+.nav-dots label:nth-child(3) { animation: dot3 6s infinite; }
 
-/* Show testimonial when radio button is checked */
-#test1:checked ~ .testimonials-container .testimonials .testimonial:nth-child(1),
-#test2:checked ~ .testimonials-container .testimonials .testimonial:nth-child(2),
-#test3:checked ~ .testimonials-container .testimonials .testimonial:nth-child(3) {
+@keyframes show1 {
+    0%, 33.33% { opacity: 1; }
+    33.34%, 100% { opacity: 0; }
+}
+@keyframes show2 {
+    0%, 33.33% { opacity: 0; }
+    33.34%, 66.66% { opacity: 1; }
+    66.67%, 100% { opacity: 0; }
+}
+@keyframes show3 {
+    0%, 66.66% { opacity: 0; }
+    66.67%, 100% { opacity: 1; }
+}
+@keyframes dot1 {
+    0%, 33.33% { background-color: #4a3a2a; transform: scale(1.1); }
+    33.34%, 100% { background-color: #64503D; transform: scale(1); }
+}
+@keyframes dot2 {
+    0%, 33.33% { background-color: #64503D; transform: scale(1); }
+    33.34%, 66.66% { background-color: #4a3a2a; transform: scale(1.1); }
+    66.67%, 100% { background-color: #64503D; transform: scale(1); }
+}
+@keyframes dot3 {
+    0%, 66.66% { background-color: #64503D; transform: scale(1); }
+    66.67%, 100% { background-color: #4a3a2a; transform: scale(1.1); }
+}
+#test1:checked ~ * .testimonials-container .testimonials .testimonial:nth-child(1),
+#test2:checked ~ * .testimonials-container .testimonials .testimonial:nth-child(2),
+#test3:checked ~ * .testimonials-container .testimonials .testimonial:nth-child(3) {
     opacity: 1;
 }
 
-/* Testimonial text */
 .testimonial p {
-    font-family: "Playfair Display", serif;
-    font-size: 1.3em;
-    line-height: 1.6;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    line-height: 1.7;
     color: #64503D;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     font-style: italic;
-    text-align: center;
-}
-
-/* Client name */
-.testimonial h3 {
-    color: #64503D;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.2em;
-    margin-bottom: 8px;
     font-weight: 600;
-    text-align: center;
 }
 
-/* Service name */
+.testimonial h3 {
+    color: #E5AA70;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
 .testimonial span {
-    color: #8B7355;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.95em;
-    text-align: center;
-    display: block;
+    color: #64503D;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
 }
 
-/* Navigation dots */
 .nav-dots {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
 }
 
 .nav-dots label {
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    background-color: #B8A691;
+    width: 16px;
+    height: 16px;
+    background-color: #64503D;
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s ease;
+    border: 2px solid #4a3a2a;
 }
 
 .nav-dots label:hover {
@@ -329,105 +430,34 @@ input[type="radio"] {
     transform: scale(1.2);
 }
 
-/* Active dot */
-#test1:checked ~ .testimonials-container .nav-dots label:nth-child(1),
-#test2:checked ~ .testimonials-container .nav-dots label:nth-child(2),
-#test3:checked ~ .testimonials-container .nav-dots label:nth-child(3) {
-    background-color: #64503D;
+#test1:checked ~ * .testimonials-container .nav-dots label:nth-child(1),
+#test2:checked ~ * .testimonials-container .nav-dots label:nth-child(2),
+#test3:checked ~ * .testimonials-container .nav-dots label:nth-child(3) {
+    background-color: #4a3a2a;
     transform: scale(1.1);
 }
 
-/* Mobile responsive */
-@media screen and (max-width: 768px) {
-    .testimonials-section {
-        padding: 60px 15px;
-    }
-    
-    .testimonials-section .heading {
-        font-size: 28px;
-        margin-bottom: 40px;
-    }
-    
-    .testimonials {
-        height: 280px;
-    }
-    
-    .testimonial {
-        padding: 20px;
-    }
-    
-    .testimonial p {
-        font-size: 1.1em;
-        margin-bottom: 20px;
-    }
-    
-    .testimonial h3 {
-        font-size: 1.1em;
-    }
-    
-    .testimonial span {
-        font-size: 0.9em;
-    }
-    
-    .nav-dots {
-        gap: 12px;
-    }
-    
-    .nav-dots label {
-        width: 12px;
-        height: 12px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .testimonials-section {
-        padding: 50px 10px;
-    }
-    
-    .testimonials-section .heading {
-        font-size: 24px;
-        margin-bottom: 30px;
-    }
-    
-    .testimonials {
-        height: 300px;
-    }
-    
-    .testimonial {
-        padding: 15px;
-    }
-    
-    .testimonial p {
-        font-size: 1em;
-        line-height: 1.5;
-    }
-    
-    .testimonial h3 {
-        font-size: 1em;
-        margin-bottom: 5px;
-    }
-    
-    .testimonial span {
-        font-size: 0.85em;
-    }
-}
-
-/* Footer */
+/*Footer*/
 footer {
-    background-color: #64503D;
+    background: linear-gradient(135deg, #64503D 0%, #4a3a2a 100%);
     color: #E2D4C7;
     text-align: center;
-    padding: 30px 0;
+    padding: 20px 0;
 }
 
 footer p {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
 }
 
-/* Responsive Design */
+/*Responsive*/
 @media screen and (max-width: 1024px) {
     .masonry {
         column-count: 3;
+    }
+    
+    .navbar {
+        padding: 15px 20px;
     }
 }
 
@@ -440,9 +470,13 @@ footer p {
         display: block;
     }
     
+    .section {
+        padding: 100px 20px 60px;
+    }
+    
     .service_box {
-        flex-direction: column;
-        gap: 20px;
+        grid-template-columns: 1fr;
+        gap: 25px;
     }
     
     .masonry {
@@ -450,23 +484,26 @@ footer p {
     }
     
     .content {
-        width: 90%;
+        padding: 30px 20px;
+        margin: 0 20px;
     }
     
-    .heading {
-        font-size: 28px;
+    .testimonials {
+        height: 320px;
     }
     
-    .para {
-        font-size: 14px;
+    .testimonial {
+        padding: 20px;
     }
-    
-    .sec {
-        padding: 60px 15px;
+
+    .filter-tabs {
+        flex-wrap: wrap;
+        gap: 8px;
     }
-    
-    .portfolio-section {
-        padding: 60px 15px;
+
+    .filter-tabs label {
+        padding: 10px 20px;
+        font-size: 0.8rem;
     }
 }
 
@@ -476,29 +513,33 @@ footer p {
         margin: 0 10px;
     }
     
-    .heading {
-        font-size: 24px;
-    }
-    
     .navbar {
-        padding: 2% 3%;
+        padding: 15px 15px;
     }
     
     .service_box {
-        gap: 15px;
+        gap: 20px;
     }
     
     .boxes h1 {
-        font-size: 20px;
-        padding: 15px;
+        font-size: 1.4rem;
+        padding: 20px 20px 10px;
     }
     
     .boxes p {
-        padding: 0 15px 15px 15px;
-        font-size: 13px;
+        padding: 0 20px;
+        font-size: 0.95rem;
     }
     
     .boxes a {
-        margin: 0 15px 15px 15px;
+        margin: 0 20px 20px;
+    }
+    
+    .testimonials {
+        height: 350px;
+    }
+    
+    .testimonial p {
+        font-size: 1.2rem;
     }
 }
