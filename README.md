@@ -1,40 +1,62 @@
 Interior Design Studio Website
-A modern, responsive portfolio website for an interior design studio — built entirely with HTML and CSS, without any JavaScript. Features include a masonry-style portfolio, category-based project filtering, and an interactive testimonials carousel.
+A modern, responsive portfolio website for an interior design studio — built entirely with HTML and CSS, without any JavaScript. The site showcases services, portfolio projects, client testimonials, and contact information, with a minimal and elegant design for a premium brand feel.
 
-📌 Features
-Masonry-Style Portfolio using CSS Grid (no JS required).
-Category Filtering with the CSS checkbox hack.
-Testimonials Carousel built entirely with HTML & CSS animations.
-Responsive Design for mobile, tablet, and desktop.
-Minimal & Elegant UI for a premium brand feel.
+Project Structure
+index.html — Homepage with hero section, introduction, and featured services.
 
-📂 Project Structure
+portfolio.html — Portfolio page with masonry-style layout for showcasing projects.
+
+services.html — Details of design services offered.
+
+testimonials.html — Client testimonials with CSS-based carousel animation.
+
+styles.css — Main stylesheet for layout, typography, and animations.
+
+/images — Contains project photos, icons, and design assets.
+
+/assets — Any additional resources (fonts, graphics, etc.).
+
+README.md — Project documentation.
+
+Features
+Responsive Design — Optimized for desktop, tablet, and mobile.
+
+Masonry-Style Portfolio — Built with CSS Grid, no JavaScript required.
+
+Category Filtering — Implemented using CSS checkbox hack.
+
+CSS-Only Carousel — Smooth testimonial rotation without JS.
+
+Premium Aesthetic — Minimalist UI with elegant typography and spacing.
+
+How to Run
+Clone or Download this repository:
+
 bash
 Copy
 Edit
-Interior-Design-Website/
-│── index.html
-│── style.css
-│── /images
-│── /assets
-│── README.md
+git clone https://github.com/anshikasso/interior-design-website.git
+Open index.html in your preferred browser.
 
-🚀 Getting Started
-1. Clone the Repository
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/interior-design-website.git
-2. Open in Browser
-Simply open the index.html file in your browser.
-No installation or dependencies required.
+Navigate between pages using the top menu.
 
-🖥️ Tech Stack
-HTML5 – Structure
-CSS3 – Styling, animations, and layout
-No JavaScript – Achieved full interactivity with only HTML & CSS
+No installation or dependencies required — works as a fully static website.
 
+Customization
+Replace images in /images with your own portfolio and background photos.
 
-CMS integration for dynamic content updates
+Edit project descriptions, services, and testimonials directly in their respective HTML files.
 
-Contact form with backend support
+Update colors, fonts, and layouts in styles.css to match your brand.
+
+Development Notes
+Recommended editor: Visual Studio Code
+
+To preview changes instantly, use the Live Server extension.
+
+All interactivity is powered purely by HTML5 and CSS3 — no JavaScript used.
+
+License
+This project is for educational and personal use.
+All images and content belong to their respective owners.
+
