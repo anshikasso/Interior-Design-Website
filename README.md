@@ -12,7 +12,6 @@ A modern, responsive portfolio website for an interior design studio — built e
 - `testimonials.html` — Client testimonials in a CSS-based carousel.
 - `styles.css` — Main stylesheet for layout, colors, typography, and animations.
 - `/images` — Project photos, icons, and decorative assets.
-- `/assets` — Additional resources such as fonts or graphics.
 
 ---
 
